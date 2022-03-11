@@ -1,0 +1,43 @@
+.baiTapThuKinh{
+  position: relative;
+  background-size: cover;
+  height: 760px;
+}
+.row {
+  margin: 0;
+}
+.header-title{
+  background-color: #0000008c;
+}
+.model {
+  width: 250px;
+  height: 305px;
+  background-size: cover;
+  margin-right: 300px;
+}
+.glass {
+  margin-top: 75px;
+  opacity: 0.7;
+}
+.glasses-list{
+  margin-top: 60px !important;
+  padding: 3rem 2rem;
+}
+.glass-item{
+  border: 1px solid rgba(0, 0, 0, 0.295);
+  padding: 5px;
+}
+.glass-item img{
+  cursor: pointer;
+}
+.card {
+  border: none;
+}
+.card-title{
+  color: #8f62e0;
+}
+.card-img-overlay {
+  top: 11.5rem;
+  padding: 0.5rem;
+  background-color: #ff96444d;
+}
