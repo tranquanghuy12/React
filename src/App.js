@@ -14,6 +14,9 @@ import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
 import DemoPropsChildren from "./Props/DemoPropsChildren/DemoPropsChildren";
 import BaiTapChonXeRedux from "./DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux";
 import BaiTapThuKinh from "./Props/BaiTapThuKinh/BaiTapThuKinh";
+import BaiTapGameXucXac from "./DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac";
+import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
+import BookingTicket from "./DemoRedux/BookingTicket/BookingTicket";
 
 function App() {
   return (
@@ -43,9 +46,14 @@ function App() {
       {/* <BaiTapQLSP /> */}
       {/* <BaiTapXemChiTiet /> */}
       {/* <ExerciseCarStore /> */}
-      <BaiTapThuKinh />
+      {/* <BaiTapThuKinh /> */}
       {/* <DemoPropsChildren /> */}
       {/* <BaiTapChonXeRedux /> */}
+      {/* <BaiTapGameXucXac /> */}
+
+      {/* <BaiTapQuanLyNguoiDung /> */}
+
+      <BookingTicket />
     </div>
   );
 }
