@@ -13,10 +13,11 @@ import "./App.css";
 // import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
 // import DemoPropsChildren from "./Props/DemoPropsChildren/DemoPropsChildren";
 // import BaiTapChonXeRedux from "./DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux";
-// import BaiTapThuKinh from "./Props/BaiTapThuKinh/BaiTapThuKinh";
+import BaiTapThuKinh from "./Props/BaiTapThuKinh/BaiTapThuKinh";
 // import BaiTapGameXucXac from "./DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac";
-// import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
+import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
 import BookingTicket from "./DemoRedux/BookingTicket/BookingTicket";
+import ReactLifeCycle from "./ReactLifeCycle/ReactLifeCycle";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
       {/* <BaiTapQuanLyNguoiDung /> */}
 
       <BookingTicket />
+      {/* <ReactLifeCycle /> */}
     </div>
   );
 }
