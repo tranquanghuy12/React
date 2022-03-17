@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 
 //setup redux
 import { Provider } from "react-redux";
-import { store } from "./redux/reducer/configStore";
+import { store } from "./redux/configStore";
 
 ReactDOM.render(
   <Provider store={store}>

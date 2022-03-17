@@ -12,7 +12,7 @@ import "./App.css";
 // import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet";
 // import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore";
 // import DemoPropsChildren from "./Props/DemoPropsChildren/DemoPropsChildren";
-// import BaiTapChonXeRedux from "./DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux";
+import BaiTapChonXeRedux from "./DemoRedux/BaiTapChonXeRedux/BaiTapChonXeRedux";
 import BaiTapThuKinh from "./Props/BaiTapThuKinh/BaiTapThuKinh";
 // import BaiTapGameXucXac from "./DemoRedux/BaiTapGameXucXac/BaiTapGameXucXac";
 import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
@@ -49,12 +49,12 @@ function App() {
       {/* <ExerciseCarStore /> */}
       {/* <BaiTapThuKinh /> */}
       {/* <DemoPropsChildren /> */}
-      {/* <BaiTapChonXeRedux /> */}
+      <BaiTapChonXeRedux />
       {/* <BaiTapGameXucXac /> */}
 
       {/* <BaiTapQuanLyNguoiDung /> */}
 
-      <BookingTicket />
+      {/* <BookingTicket /> */}
       {/* <ReactLifeCycle /> */}
     </div>
   );
