@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CarItemRedux from "./BaiTapChonXeRedux/CarItemRedux";
+import CarItemRedux from "./CarItemRedux";
 
 export default class CarListRedux extends Component {
   renderProduct = () => {

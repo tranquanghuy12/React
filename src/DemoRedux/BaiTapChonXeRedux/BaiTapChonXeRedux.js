@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CarListRedux from "../CarListRedux";
+import CarListRedux from "./CarListRedux";
 import CarModalRedux from "./CarModalRedux";
 
 export default class BaiTapChonXeRedux extends Component {
