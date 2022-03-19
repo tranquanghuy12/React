@@ -49,10 +49,10 @@ function App() {
       {/* <ExerciseCarStore /> */}
       {/* <BaiTapThuKinh /> */}
       {/* <DemoPropsChildren /> */}
-      <BaiTapChonXeRedux />
+      {/* <BaiTapChonXeRedux /> */}
       {/* <BaiTapGameXucXac /> */}
 
-      {/* <BaiTapQuanLyNguoiDung /> */}
+      <BaiTapQuanLyNguoiDung />
 
       {/* <BookingTicket /> */}
       {/* <ReactLifeCycle /> */}

@@ -1,8 +1,20 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import _ from "lodash";
 
 class TableDanhSachNguoiDung extends Component {
+  state = {
+    sortBy: "taiKhoan",
+  };
+
+  handleSort = (name) => {
+    this.setState({
+      sortBy: name,
+    });
+  };
   render() {
+    let { mangNguoiDung } = this.props;
+    mangNguoiDung = _.sortBy(mangNguoiDung, [this.state.sortBy]);
     return (
       <div className="card">
         <div className="card-header bg-dark text-white">
@@ -12,16 +24,51 @@ class TableDanhSachNguoiDung extends Component {
           <thead>
             <tr>
               <th>STT</th>
-              <th>Tài khoản</th>
-              <th>Họ tên</th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  this.handleSort("taiKhoan");
+                }}
+              >
+                Tài khoản
+              </th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  this.handleSort("hoTen");
+                }}
+              >
+                Họ tên
+              </th>
               <th>Mật khẩu</th>
-              <th>Email</th>
-              <th>Số điện thoại</th>
-              <th>Loại người dùng</th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  this.handleSort("email");
+                }}
+              >
+                Email
+              </th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  this.handleSort("soDienThoai");
+                }}
+              >
+                Số điện thoại
+              </th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  this.handleSort("loaiNguoiDung");
+                }}
+              >
+                Loại người dùng
+              </th>
             </tr>
           </thead>
           <tbody>
-            {this.props.mangNguoiDung.map((nguoiDung, index) => {
+            {mangNguoiDung.map((nguoiDung, index) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
@@ -34,8 +81,32 @@ class TableDanhSachNguoiDung extends Component {
                     {nguoiDung.loaiNguoiDung == "1" ? "Người dùng" : "Quản trị"}
                   </td>
                   <td>
-                    <button className="btn btn-danger">Xóa</button>
-                    <button className="btn btn-primary ml-2">Chỉnh sửa</button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        const action = {
+                          type: "XOA_NGUOI_DUNG",
+                          taiKhoan: nguoiDung.taiKhoan,
+                        };
+                        //Gửi dữ liệu lên redux
+                        this.props.dispatch(action);
+                      }}
+                    >
+                      Xóa
+                    </button>
+                    <button
+                      className="btn btn-primary ml-2"
+                      onClick={() => {
+                        const action = {
+                          type: "SUA_NGUOI_DUNG",
+                          nguoiDung: nguoiDung,
+                        };
+                        //Gửi dữ liệu lên redux
+                        this.props.dispatch(action);
+                      }}
+                    >
+                      Chỉnh sửa
+                    </button>
                   </td>
                 </tr>
               );

@@ -19,6 +19,15 @@ const stateDefault = {
       loaiNguoiDung: "2",
     },
   ],
+
+  nguoiDungSua: {
+    taiKhoan: "xyz",
+    hoTen: "Trần Văn B",
+    soDienThoai: "0101010101",
+    email: "tranvanb@gmail.com",
+    matKhau: "123123123",
+    loaiNguoiDung: "2",
+  },
 };
 
 export const baiTapQuanLyNguoiDungReducer = (state = stateDefault, action) => {
@@ -36,6 +45,11 @@ export const baiTapQuanLyNguoiDungReducer = (state = stateDefault, action) => {
       );
 
       state.mangNguoiDung = mangNguoiDungUpdate;
+      return { ...state };
+    }
+
+    case "SUA_NGUOI_DUNG": {
+      state.nguoiDungSua = action.nguoiDung;
       return { ...state };
     }
     default:
