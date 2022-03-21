@@ -18,6 +18,7 @@ import BaiTapThuKinh from "./Props/BaiTapThuKinh/BaiTapThuKinh";
 import BaiTapQuanLyNguoiDung from "./DemoRedux/BaiTapQuanLyNguoiDung/BaiTapQuanLyNguoiDung";
 import BookingTicket from "./DemoRedux/BookingTicket/BookingTicket";
 import ReactLifeCycle from "./ReactLifeCycle/ReactLifeCycle";
+import AxiosDemo from "./AxiosDemo/AxiosDemo";
 
 function App() {
   return (
@@ -52,10 +53,12 @@ function App() {
       {/* <BaiTapChonXeRedux /> */}
       {/* <BaiTapGameXucXac /> */}
 
-      <BaiTapQuanLyNguoiDung />
+      {/* <BaiTapQuanLyNguoiDung /> */}
 
       {/* <BookingTicket /> */}
       {/* <ReactLifeCycle /> */}
+
+      <AxiosDemo/>
     </div>
   );
 }

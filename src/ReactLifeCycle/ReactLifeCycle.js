@@ -4,7 +4,13 @@ import ChildComponent from "./ChildComponent";
 export default class ReactLifeCycle extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      number: 1,
+      like: 1,
+      object: {
+        number: 1,
+      },
+    };
     console.log("constructor");
   }
 
@@ -18,25 +24,42 @@ export default class ReactLifeCycle extends Component {
   shouldComponentUpdate(newProps, newState) {
     //shouldComponentUpdate: quyết định render hoặc không render lại component
     console.log("shouldComponentUpdate");
-    return false;
+    return true;
   }
   render() {
     console.log("render");
     return (
       <div className="container">
-        <h3>Number: {this.state.number}</h3>
+        <h3>Number: {this.state.object.number}</h3>
+        <h3>Like: {this.state.like}</h3>
         <button
           className="btn btn-success"
           onClick={() => {
+            let newObject = { ...this.state.object };
+            newObject.number += 1;
             this.setState({
-              number: this.state.number + 1,
+              object: newObject,
             });
           }}
         >
           +
         </button>
+        <button
+          className="btn btn-danger"
+          onClick={() => {
+            this.setState({
+              like: this.state.like + 1,
+            });
+          }}
+        >
+          Like
+        </button>
         <h3>Child component</h3>
-        <ChildComponent />
+        {this.state.object.number > 3 ? (
+          ""
+        ) : (
+          <ChildComponent object={this.state.object} />
+        )}
       </div>
     );
   }
