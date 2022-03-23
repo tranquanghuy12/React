@@ -1,7 +1,7 @@
 const stateDefault = {
-  banChon: true, //true là tài, false là xỉu
-  soBanThang: 10,
-  tongSoBanChoi: 20,
+  banChon: true, //true là tài (3->11), false là xỉu (<12)
+  soBanThang: 0,
+  tongSoBanChoi: 0,
   mangXucXac: [
     { soDiem: 1, img: "./img/gameXucXac/1.png" },
     { soDiem: 2, img: "./img/gameXucXac/2.png" },
@@ -38,6 +38,12 @@ export const baiTapGameXucXacReducer = (state = stateDefault, action) => {
       let tongDiem = state.mangXucXac.reduce((diem, xx, index) => {
         return (diem += xx.soDiem);
       }, 0);
+
+      if (tongDiem <= 11) {
+        alert("XỈU");
+      } else if (tongDiem > 11) {
+        alert("TÀI");
+      }
 
       if (
         (tongDiem <= 11 && state.banChon === false) ||
